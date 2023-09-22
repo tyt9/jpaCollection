@@ -31,6 +31,7 @@ public class MainEm {
         return student;
     }
 
+    @Transactional
     public void insertNewCourse(Long id, String course) {
         Student student = em.find(Student.class, id);
         List<String> courses = student.getCourses();
